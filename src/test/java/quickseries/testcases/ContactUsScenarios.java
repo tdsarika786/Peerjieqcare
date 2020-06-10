@@ -30,7 +30,7 @@ public class ContactUsScenarios extends BaseClass {
 
 		contact.verifyContactUsUrl();
 
-		logger.info("Validated Contact us page url");
+		logger.info("Validated contact us page url");
 
 		contact.verifyPageTitleAfterNavigateToContactUs();
 
@@ -45,7 +45,7 @@ public class ContactUsScenarios extends BaseClass {
 	@Test(priority = 1, dependsOnMethods = "verifyPage")
 	public void TC_01_Display_Validation_Errors() {
 
-		logger = report.createTest("Errors Validation");
+		logger = report.createTest("Contact Us Form Errors Validation");
 
 		contact.validateContactPageErrors();
 
@@ -53,7 +53,7 @@ public class ContactUsScenarios extends BaseClass {
 
 		contact.verifyContactUsUrl();
 
-		logger.info("User unable to submit form");
+		logger.info("Verified user cannot submit empty form ");
 
 	}
 

@@ -36,6 +36,8 @@ public class ContactUsPage {
 	By PhoneNoErrorMsg = By.xpath("//input[@name='phone-number']/following-sibling::span");
 
 	By EmailErrorMsg = By.xpath("//input[@name='your-email']/following-sibling::span");
+	
+	By ValidationErrorsMsg = By.xpath("//div[contains(@class,'wpcf7-validation-errors')]");
 
 	@FindAll({ @FindBy(xpath = "//span[contains(text(),'field is required')]") })
 	public List<WebElement> ErrorMessages;
@@ -74,6 +76,8 @@ public class ContactUsPage {
 		WebElement eleEmailErrorMsg = Utility.waitForWebElement(driver, EmailErrorMsg);
 
 		WebElement eleCaptchaSpanErrorMsg = Utility.waitForWebElement(driver, CaptchaSpanErrorMsg);
+		
+		WebElement eleValidationErrorsMsg = Utility.waitForWebElement(driver, ValidationErrorsMsg);
 
 		String firstNameErrorMessage = eleFirstNameErrorMsg.getText();
 
@@ -86,18 +90,24 @@ public class ContactUsPage {
 		String emailErrorMessage = eleEmailErrorMsg.getText();
 
 		String captchaErrorMessage = eleCaptchaSpanErrorMsg.getText();
+		
+		String validationErrorsMsg = eleValidationErrorsMsg.getText();
 
 		boolean exist = false;
 
-		String errorMessage = "The field is required.";
+		String fieldErrorMessage = "The field is required.";
 
 		String captchaError = "Please solve Captcha correctly";
+		
+		String errorMessage ="One or more fields have an error. Please check and try again.";
 
-		if (firstNameErrorMessage.equals(errorMessage) && lastNameErrorMessage.equals(errorMessage)
+		if (firstNameErrorMessage.equals(fieldErrorMessage) && lastNameErrorMessage.equals(fieldErrorMessage)
 
-				&& companyErrorMessage.equals(errorMessage) && phoneNoErrorMessage.equals(errorMessage)
+				&& companyErrorMessage.equals(fieldErrorMessage) && phoneNoErrorMessage.equals(fieldErrorMessage)
 
-				&& emailErrorMessage.equals(errorMessage) && captchaErrorMessage.equals(captchaError)) {
+				&& emailErrorMessage.equals(fieldErrorMessage) && captchaErrorMessage.equals(captchaError)
+				
+				&& validationErrorsMsg.equals(errorMessage) ) {
 			exist = true;
 			System.out.println("First Name-" + firstNameErrorMessage);
 
@@ -110,6 +120,8 @@ public class ContactUsPage {
 			System.out.println("Email-" + emailErrorMessage);
 
 			System.out.println("Captcha-" + captchaErrorMessage);
+			
+			System.out.println("Validation Error Messaage-" + validationErrorsMsg);
 
 		}
 
