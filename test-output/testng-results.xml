@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18893" started-at="2020-06-10T00:26:11Z" finished-at="2020-06-10T00:26:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18893" started-at="2020-06-10T00:26:11Z" finished-at="2020-06-10T00:26:30Z">
+      <class name="quickseries.testcases.ContactUsScenarios">
+        <test-method status="PASS" signature="setupReport()[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="setupReport" is-config="true" duration-ms="137" started-at="2020-06-10T00:26:11Z" finished-at="2020-06-10T00:26:11Z">
+        </test-method> <!-- setupReport -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="setUp" is-config="true" duration-ms="10678" started-at="2020-06-10T00:26:11Z" finished-at="2020-06-10T00:26:22Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyPage()[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="verifyPage" duration-ms="1403" started-at="2020-06-10T00:26:22Z" finished-at="2020-06-10T00:26:23Z">
+        </test-method> <!-- verifyPage -->
+        <test-method status="PASS" signature="tearDownReport(org.testng.ITestResult)[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="tearDownReport" is-config="true" duration-ms="598" started-at="2020-06-10T00:26:23Z" finished-at="2020-06-10T00:26:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult: verifyPage STATUS:SUCCESS METHOD:ContactUsScenarios.verifyPage()[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]]
+]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- tearDownReport -->
+        <test-method status="PASS" signature="TC_01_Display_Validation_Errors()[pri:1, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="TC_01_Display_Validation_Errors" duration-ms="6001" started-at="2020-06-10T00:26:24Z" depends-on-methods="quickseries.testcases.ContactUsScenarios.verifyPage" finished-at="2020-06-10T00:26:30Z">
+        </test-method> <!-- TC_01_Display_Validation_Errors -->
+        <test-method status="PASS" signature="tearDownReport(org.testng.ITestResult)[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="tearDownReport" is-config="true" duration-ms="52" started-at="2020-06-10T00:26:30Z" finished-at="2020-06-10T00:26:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult: TC_01_Display_Validation_Errors STATUS:SUCCESS METHOD:ContactUsScenarios.TC_01_Display_Validation_Errors()[pri:1, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]]
+]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- tearDownReport -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:quickseries.testcases.ContactUsScenarios@7bb58ca3]" name="tearDown" is-config="true" duration-ms="145" started-at="2020-06-10T00:26:30Z" finished-at="2020-06-10T00:26:30Z">
+        </test-method> <!-- tearDown -->
+      </class> <!-- quickseries.testcases.ContactUsScenarios -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
