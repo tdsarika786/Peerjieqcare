@@ -5,6 +5,8 @@
     <classes>
       <class name="quickseries.testcases.ContactUsScenarios">
         <methods>
+          <include name="TC_01_Display_Validation_Errors"/>
+          <include name="tearDown"/>
           <include name="verifyPage"/>
           <include name="setupReport"/>
           <include name="tearDownReport"/>
